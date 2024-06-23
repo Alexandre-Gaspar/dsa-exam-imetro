@@ -1,20 +1,6 @@
-// const canvas = document.getElementById('tree-canvas');
-// const ctx = canvas.getContext('2d');
-
-// let nodeList = [];
-// let links = []; // Array to store the connections (links) between the this.nodeList in the binary tree
-
 const NODE_RADIUS = 20; // Radius of each node circle in the tree visualization
 const LEVEL_HEIGHT = 100; // Vertical distance between levels in the tree visualization
 const MIN_HORIZONTAL_SPACING = 20; // Minimum horizontal spacing between this.nodeList at the same level
-    
-class TreeNode {
-    constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
-    }
-}
 
 class BinaryTree {
     constructor() {
@@ -87,23 +73,6 @@ class BinaryTree {
         });
     }
 
-    // updateNodePositions(canvas) {
-    //     const setNodePosition = (node, x, y, depth) => {
-    //         if (node === null) return;
-    //         node.x = x;
-    //         node.y = y;
-    //         const horizontalSpacing = MIN_HORIZONTAL_SPACING * Math.pow(2, depth); // Adjust spacing based on depth
-    //         const leftChild = this.nodeList[node.left];
-    //         const rightChild = this.nodeList[node.right];
-    //         if (leftChild) {
-    //             setNodePosition(leftChild, x - horizontalSpacing, y + LEVEL_HEIGHT, depth + 1);
-    //         }
-    //         if (rightChild) {
-    //             setNodePosition(rightChild, x + horizontalSpacing, y + LEVEL_HEIGHT, depth + 1);
-    //         }
-    //     };
-    //     setNodePosition(this.nodeList[0], canvas.width / 2, 100, 0);
-    // }
     updateNodePositions(canvas) {
         const setNodePosition = (node, x, y, depth) => {
             if (node === null) return;
@@ -138,7 +107,7 @@ class BinaryTree {
         };
     
         const initialX = canvas.width / 2;
-        const initialY = 50; // Posição inicial a partir do topo do canvas
+        const initialY = 50; // Initial position from top of canvas
     
         setNodePosition(this.nodeList[0], initialX, initialY, 0);
     }
