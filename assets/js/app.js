@@ -7,10 +7,6 @@ const $contentValues = document.querySelector('.values>div.content');
 const $addButton = document.querySelector('.btn-add');
 const $deleteButton = document.querySelector('.btn-delete');
 
-const NODE_RADIUS = 20;
-const LEVEL_HEIGHT = 100;
-const MIN_HORIZONTAL_SPACING = 50;
-
 const tree = new BinaryTree();
 
 function updateTreeDisplay() {
@@ -26,7 +22,7 @@ $addButton.addEventListener('click', () => {
         $nodeValueInput.value = '';
     } else 
         alert('Please, enter a valid node value.');
-    console.log(tree.nodeList.length);
+    // console.log(tree.nodeList.length);
 });
 
 $deleteButton.addEventListener('click', () => {
@@ -37,8 +33,8 @@ $deleteButton.addEventListener('click', () => {
         $nodeValueInput.value = '';
     } else 
         alert('Please, enter a valid node value.');
-    console.log(tree.nodeList.length);
+    // console.log(tree.nodeList.length);
 });
 
 
-tree.drawTree(ctx, $canvasTree);
+tree.drawTree(ctx, $canvasTree); // Draw binary tree whenever a node is added
