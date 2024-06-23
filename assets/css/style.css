@@ -16,7 +16,7 @@ body {
     font-family: sans-serif;
     color: #f5f5f5;
     background-color: #1a1a1d;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 header {
@@ -81,7 +81,7 @@ main {
     cursor: pointer
 }
 
-.controls  form {
+.controls  div.layer {
     border: 1px solid #333333;
     /* border: 1px solid green; */
     width: 350px;
@@ -95,9 +95,9 @@ main {
     box-shadow: var(--box-shadow);
 }
 
-.controls form h1 {font-size: 1.5rem}
+.controls div.layer h1 {font-size: 1.5rem}
 
-.controls form input {
+.controls div.layer input {
     /* border: 1px solid var(--color-blue); */
     padding: 10px 15px;
     border-radius: 5px;
@@ -106,7 +106,7 @@ main {
     color: #f5f5f5;
 }
 
-.controls form div.buttons {
+.controls div.layer div.buttons {
     width: inherit;
     display: flex;
     gap: 30px;
@@ -156,10 +156,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     /* border: 1px solid darkblue; */
 }
 
-#tree-canvas {
+.canvas-container {
     border: 1px solid #333333;
     margin-top: 20px;
     width: 60%;
@@ -167,6 +168,7 @@ main {
     border-radius: 3px;
     box-shadow: var(--box-shadow);
     /* border: 1px solid purple; */
+    overflow: auto;
 }
 
 #canva__optional-text {
