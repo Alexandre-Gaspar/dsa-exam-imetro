@@ -9,8 +9,12 @@ class BinaryTree {
         this.nodeList = [] // Array to store the this.nodeList
     }
 
-    generateNodeList() {
-        return this.nodeList.map(node => ` [${node.label}]`)
+    getAllValues() {
+        return this.nodeList.map(node => ` [${node.label}]`);
+    }
+
+    isEmpty() {
+        return this.nodeList.length === 0;
     }
 
     drawTree(ctx, canvas) {
