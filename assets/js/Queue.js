@@ -5,15 +5,13 @@ class Queue {
         this.queue = [];
     }
 
-    enQueue(element) {
-        // // Check if label is a number
-        // if (!isNaN(element)) {
-        //     alert('Label must be a number.');
-        //     return;
-        // }
+    getAllValues() {
+        return this.queue.map(element => ` [${element}]`);
+    }
 
+    enQueue(element) {
         this.queue.push(element);
-        this.drawQueueNode(50, 100); // Atualiza o desenho da fila sempre que um elemento é adicionado
+        this.drawQueueNode(50, 100); // Update the queue draw whenever a element is added
     }
 
     deQueue() {
@@ -23,7 +21,7 @@ class Queue {
         }
 
         const firstElement = this.queue.shift();
-        this.drawQueueNode(50, 100); // Atualiza o desenho da fila sempre que um elemento é removido
+        this.drawQueueNode(50, 100); // Update the queue draw whenever a element is removed
         return firstElement;
     }
 
@@ -67,11 +65,5 @@ class Queue {
         });
     }
 }
-
-// const queueInstance = new Queue();
-
-// for (let i = 10; i < 20; i += 2) {
-//     queueInstance.enQueue(i);
-// }
 
 export default Queue;
